@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "236388032698",
+    "project_id": "japanslo-e556c",
+    "storage_bucket": "japanslo-e556c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236388032698:android:84a6fbad25a965ac992283",
+        "android_client_info": {
+          "package_name": "com.mojo.japanslots"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236388032698-m6ain17ba4oru7pqs91hhsbrp5130em6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz8rhrykq8HF4jVUTngTyl2uLsDQGUDa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236388032698-m6ain17ba4oru7pqs91hhsbrp5130em6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

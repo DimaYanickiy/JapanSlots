@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layaut_theme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/daybackground"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <ImageButton
+                android:id="@+id/btn_change_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_theme"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Theme"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:contentDescription="app_name"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="JapanMania"
+            android:textColor="#000000"
+            android:textSize="60sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_play"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Play"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_share"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Share"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_exit"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Exit"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

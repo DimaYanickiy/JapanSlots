@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayActivity">
+
+    <LinearLayout
+        android:id="@+id/lr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/daybackground"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/spins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:contentDescription="tokens"
+            android:fontFamily="@font/bubblegum_sans"
+            android:gravity="center"
+            android:text="Spins: 1000"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rama"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/circle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="1"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point1" />
+
+                <ImageButton
+                    android:id="@+id/circle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="2"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point2" />
+
+                <ImageButton
+                    android:id="@+id/circle7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="3"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point4" />
+
+                <ImageButton
+                    android:id="@+id/circle10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="4"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point5" />
+
+                <ImageButton
+                    android:id="@+id/circle13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="5"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/circle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="6"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/pointbonus" />
+
+                <ImageButton
+                    android:id="@+id/circle5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="7"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point1" />
+
+                <ImageButton
+                    android:id="@+id/circle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="8"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point3" />
+
+                <ImageButton
+                    android:id="@+id/circle11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="9"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point5" />
+
+                <ImageButton
+                    android:id="@+id/circle14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="10"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/circle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="11"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point2" />
+
+                <ImageButton
+                    android:id="@+id/circle6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="12"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point5" />
+
+                <ImageButton
+                    android:id="@+id/circle9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="13"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point2" />
+
+                <ImageButton
+                    android:id="@+id/circle12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="14"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/pointbonus" />
+
+                <ImageButton
+                    android:id="@+id/circle15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:contentDescription="15"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/point1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/play_10_tokens"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_spin_10"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Spin: 10"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/play_20_tokens"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_spin_20"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Spin: 20"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="btn_back"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/button" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
