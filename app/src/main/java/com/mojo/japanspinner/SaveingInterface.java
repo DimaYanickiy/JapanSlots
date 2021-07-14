@@ -1,4 +1,4 @@
-package com.mojo.japanslots;
+package com.mojo.japanspinner;
 
 public interface SaveingInterface {
     void initSharePref();

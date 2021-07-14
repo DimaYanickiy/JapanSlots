@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "236388032698",
-    "project_id": "japanslo-e556c",
-    "storage_bucket": "japanslo-e556c.appspot.com"
+    "project_number": "388169127173",
+    "project_id": "japanspinner",
+    "storage_bucket": "japanspinner.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:236388032698:android:84a6fbad25a965ac992283",
+        "mobilesdk_app_id": "1:388169127173:android:8e2e4dbfbbea6dd856136c",
         "android_client_info": {
-          "package_name": "com.mojo.japanslots"
+          "package_name": "com.mojo.japanspinner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "236388032698-m6ain17ba4oru7pqs91hhsbrp5130em6.apps.googleusercontent.com",
+          "client_id": "388169127173-7dqe30f3o818rpbp9bn4kqrvpeqbeqkc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDz8rhrykq8HF4jVUTngTyl2uLsDQGUDa0"
+          "current_key": "AIzaSyDMDj0UJj4FwbKEmhmFW9vySXYtZhAPhWM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "236388032698-m6ain17ba4oru7pqs91hhsbrp5130em6.apps.googleusercontent.com",
+              "client_id": "388169127173-7dqe30f3o818rpbp9bn4kqrvpeqbeqkc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

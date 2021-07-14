@@ -1,4 +1,4 @@
-package com.mojo.japanslots;
+package com.mojo.japanspinner;
 
 import android.widget.ImageButton;
 

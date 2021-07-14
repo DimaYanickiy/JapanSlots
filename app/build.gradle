@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.mojo.japanslots"
+        applicationId "com.mojo.japanspinner"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1

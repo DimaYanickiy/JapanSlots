@@ -1,4 +1,4 @@
-package com.mojo.japanslots;
+package com.mojo.japanspinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 

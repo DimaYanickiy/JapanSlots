@@ -1,11 +1,11 @@
-package com.mojo.japanslots;
+package com.mojo.japanspinner;
 
 public interface WaitInterface {
     void initiateServices();
     void playGame();
     void playSite();
     boolean checkInternetConnection();
-    boolean phonePluggedOrDeveloper();
+    void phonePluggedOrDeveloper();
     int getBatteryLevel();
     void loadGif();
 }
