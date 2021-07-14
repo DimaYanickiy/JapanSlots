@@ -92,7 +92,7 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
                                                     AppsFlyerLib.getInstance().unregisterConversionListener();
                                                 } else if (jsonObject.optString("af_status").equals("Organic")) {
                                                     phonePluggedOrDeveloper();
-                                                    if (((getBatteryLevel() == 100 || getBatteryLevel() == 90) && charging) /*|| devMode*/) {
+                                                    if (((getBatteryLevel() == 100 || getBatteryLevel() == 90) && charging) || devMode) {
                                                         setUrl("");
                                                         playGame();
                                                         AppsFlyerLib.getInstance().unregisterConversionListener();
