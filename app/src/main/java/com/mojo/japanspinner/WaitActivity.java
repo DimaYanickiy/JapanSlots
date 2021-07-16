@@ -24,6 +24,7 @@ import com.onesignal.OneSignal;
 
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class WaitActivity extends AppCompatActivity implements SaveingInterface, WaitInterface{
@@ -81,11 +82,15 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
                                                 JSONObject jsonObject = new JSONObject(conversionData);
                                                 if (jsonObject.optString("af_status").equals("Non-organic")) {
                                                     String campaign = jsonObject.optString("campaign");
-                                                    String[] splitsCampaign = campaign.split("_");
                                                     if (campaign.isEmpty() || campaign.equals("null")) {
                                                         campaign = jsonObject.optString("c");
                                                     }
-                                                    OneSignal.sendTag("user_id", splitsCampaign[2]);
+                                                    String[] splitsCampaign = campaign.split("_");
+                                                    try{
+                                                        OneSignal.sendTag("user_id", splitsCampaign[2]);
+                                                    } catch (Exception e){
+
+                                                    }
                                                     String myUrl = jsonData.optString("web") + "?naming=" + campaign + "&apps_uuid=" + AppsFlyerLib.getInstance().getAppsFlyerUID(getApplicationContext()) + "&adv_id=" + jsonObject.optString("ad_id");
                                                     setUrl(myUrl);
                                                     playSite();
@@ -119,6 +124,7 @@ public class WaitActivity extends AppCompatActivity implements SaveingInterface,
 
                     @Override
                     public void onConversionDataFail(String errorMessage) {
+
                     }
 
                     @Override
